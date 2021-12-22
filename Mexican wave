@@ -1,0 +1,17 @@
+function wave(str){
+  if(str.length === 0){return []}
+  str = str.split('');
+  let resultArr = [];
+
+  for(let i = 0; i < str.length; i++){
+    if(str[i] === ' '){
+      continue;
+    }
+    str[i] = str[i].toUpperCase();
+    resultArr.push(str.join(''));
+    str[i] = str[i].toLowerCase();
+  }
+  return resultArr;
+}
+
+//time: O(n), space: O(n)
