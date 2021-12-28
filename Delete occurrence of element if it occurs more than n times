@@ -1,0 +1,15 @@
+function deleteNth(arr,n){
+  var map = {};
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    if(!map[arr[i]]){
+        map[arr[i]] = 1;
+    } else {
+      map[arr[i]]++;
+    }
+    if(map[arr[i]] <= n){
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
