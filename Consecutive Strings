@@ -1,0 +1,14 @@
+function longestConsec(strarr, k) {
+  if(strarr.length === 0 || strarr.length < k || k <= 0){
+	    return "";
+  }
+  let maxStr = "";
+
+  for(let i = 0; i + k <= strarr.length; i++){
+    const concatStr = strarr.slice(i, i + k).join('');
+    if(concatStr.length > maxStr.length){maxStr = concatStr}
+  }
+  return maxStr;
+}
+
+//time: O(n), space: O(n)?
